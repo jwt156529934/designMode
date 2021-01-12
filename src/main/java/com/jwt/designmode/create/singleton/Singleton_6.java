@@ -7,7 +7,9 @@ package com.jwt.designmode.create.singleton;
  */
 public class Singleton_6 {
     public static void main(String[] args) {
-
+        Person_6 instance1 = Person_6.getInstance();
+        Person_6 instance2 = Person_6.getInstance();
+        System.out.println(instance1 == instance2);
     }
 }
 class Person_6{
@@ -18,7 +20,7 @@ class Person_6{
         private static final Person_6 PERSON_6 = new Person_6();
     }
 
-    private static Person_6 getInstance(){
+    public static Person_6 getInstance(){
         return PersonInstance.PERSON_6;
     }
 }
